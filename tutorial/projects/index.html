@@ -1,0 +1,914 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn how Prefect projects allow you to easily manage your code and deployments.">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/tutorial/projects/">
+      
+      
+        <link rel="prev" href="../deployments/">
+      
+      
+      <link rel="icon" href="../../img/+favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>Projects - Info Analytica Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/admonitions.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/api_ref.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/rest_ref.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/syntax_highlights.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/termynal.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#projects" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Info Analytica Documentation" class="md-header__button md-logo" aria-label="Info Analytica Documentation" data-md-component="logo">
+      
+  <img src="../../img/logos/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Info Analytica Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Projects
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_3">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Info Analytica Documentation" class="md-nav__button md-logo" aria-label="Info Analytica Documentation" data-md-component="logo">
+      
+  <img src="../../img/logos/logo.svg" alt="logo">
+
+    </a>
+    Info Analytica Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scrapy/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../example/" class="md-nav__link">
+        Prefect
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Tutorial</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployments/" class="md-nav__link">
+        Deployments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Projects
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-a-project" class="md-nav__link">
+    Initializing a project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-basic-deployment" class="md-nav__link">
+    Creating a basic deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a basic deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-deployment" class="md-nav__link">
+    Local deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-based-deployment" class="md-nav__link">
+    Git-based deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerized-deployment" class="md-nav__link">
+    Dockerized deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Dockerized deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerizing-a-local-deployment" class="md-nav__link">
+    Dockerizing a local deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-steps" class="md-nav__link">
+    Customizing the steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-a-project" class="md-nav__link">
+    Initializing a project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-basic-deployment" class="md-nav__link">
+    Creating a basic deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a basic deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-deployment" class="md-nav__link">
+    Local deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-based-deployment" class="md-nav__link">
+    Git-based deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerized-deployment" class="md-nav__link">
+    Dockerized deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Dockerized deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerizing-a-local-deployment" class="md-nav__link">
+    Dockerizing a local deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-steps" class="md-nav__link">
+    Customizing the steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="projects">Projects<span class="badge beta"></span><a class="headerlink" href="#projects" title="Permanent link">&para;</a></h1>
+<p>refect projects are the recommended way to organize and manage Prefect deployments; projects provide a minimally opinionated, transparent way to organize your code and configuration so that its easy to debug.</p>
+<p>A project is a directory of code and configuration for your workflows that can be customized for portability.</p>
+<p>The main components of a project are 3 files:</p>
+<ul>
+<li><a href="/concepts/projects/#the-deployment-yaml-file"><code>deployment.yaml</code></a>: a YAML file that can be used to specify settings for one or more flow deployments</li>
+<li><a href="/concepts/projects/#the-prefect-yaml-file"><code>prefect.yaml</code></a>: a YAML file that contains procedural instructions for building artifacts for this project's deployments, pushing those artifacts, and retrieving them at runtime by a Prefect worker</li>
+<li><a href="/concepts/projects/#the-prefect-directory"><code>.prefect/</code></a>: a hidden directory that designates the root for your project; basic metadata about the workflows within this project are stored here</li>
+</ul>
+<p><a name="worker-tip"></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Projects require workers</p>
+<p>Note that using a project to manage your deployments requires the use of workers.<br />
+This tutorial assumes that you have already set up two work pools, each with a worker, which only requires a single CLI command for each:</p>
+<ul>
+<li><strong>Local</strong>: <code>prefect worker start -t process -p local-work</code></li>
+<li><strong>Docker</strong>: <code>prefect worker start -t docker -p docker-work</code></li>
+</ul>
+<p>Each command will automatically create an appropriately typed work pool with default settings. For each type of worker you will need to install the specific worker from the collection repo.  For example, to start the Docker worker you will need to run <code>pip install prefect-docker</code>.  </p>
+</div>
+<h2 id="initializing-a-project">Initializing a project<a class="headerlink" href="#initializing-a-project" title="Permanent link">&para;</a></h2>
+<p>Initializing a project is simple: within any directory that you plan to develop flow code, run:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>project<span class="w"> </span>init
+</code></pre></div>
+</div>
+
+<p>Note that you can safely run this command in a non-empty directory where you already have work, as well.</p>
+<p>This command will create your <code>.prefect/</code> directory along with the two YAML files <code>deployment.yaml</code> and <code>prefect.yaml</code>; if any of these files or directories already exist, they will not be altered or overwritten.</p>
+<div class="admonition tip">
+<p class="admonition-title">Project Recipes</p>
+<p>Prefect ships with multiple project recipes, which allow you to initialize a project with a more opinionated structure suited to a particular use.  You can see all available recipes by running:</p>
+<p><div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>project<span class="w"> </span>recipe<span class="w"> </span>ls
+</code></pre></div>
+</div></p>
+<p>And you can use recipes with the <code>--recipe</code> flag:</p>
+<p><div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>project<span class="w"> </span>init<span class="w"> </span>--recipe<span class="w"> </span>docker
+</code></pre></div>
+</div></p>
+<p>Providing this flag will prompt you for required variables needed to make the recipe work properly.  If you want to run this CLI programmatically, these required fields can be provided via the <code>--field</code> flag: <code>prefect project init --recipe docker --field image_name=my-image/foo --field tag=dev</code>.</p>
+<p>If no recipe is provided, the <code>init</code> command makes an intelligent choice of recipe based on local configuration; for example, if you initialize a project within a git repository, Prefect will automatically use the <code>git</code> recipe.</p>
+</div>
+<h2 id="creating-a-basic-deployment">Creating a basic deployment<a class="headerlink" href="#creating-a-basic-deployment" title="Permanent link">&para;</a></h2>
+<p>Projects are most useful for creating deployments; let's walk through some examples.  </p>
+<h3 id="local-deployment">Local deployment<a class="headerlink" href="#local-deployment" title="Permanent link">&para;</a></h3>
+<p>In this example, we'll create a project from scratch that runs locally.  Let's start by creating a new directory, making that our working directory, and initializing a project:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>my-first-project
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>my-first-project
+$<span class="w"> </span>prefect<span class="w"> </span>project<span class="w"> </span>init<span class="w"> </span>--recipe<span class="w"> </span><span class="nb">local</span>
+</code></pre></div>
+</div>
+
+<p>Next, let's create a flow by saving the following code in a new file called <code>api_flow.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># contents of my-first-project/api_flow.py</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">prefect</span> <span class="kn">import</span> <span class="n">flow</span>
+
+
+<span class="nd">@flow</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Call API&quot;</span><span class="p">,</span> <span class="n">log_prints</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">call_api</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;http://time.jsontest.com/&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Sends a GET request to the provided URL and returns the JSON response&quot;&quot;&quot;</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">resp</span>
+</code></pre></div>
+<p>You can experiment by importing and running this flow in your favorite REPL; let's now elevate this flow to a <a href="/concepts/deployments/">deployment</a> via the <code>prefect deploy</code> CLI command:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>deploy<span class="w"> </span>./api_flow.py:call_api<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-n<span class="w"> </span>my-first-deployment<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span>local-work
+</code></pre></div>
+</div>
+
+<p>This command will create a new deployment for your <code>"Call API"</code> flow with the name <code>"my-first-deployment"</code> that is attached to the <code>local-work</code> work pool.</p>
+<p>Note that Prefect has automatically done a few things for you:</p>
+<ul>
+<li>registered the existence of this flow <a href="/concepts/projects/#the-prefect-directory">with your local project</a></li>
+<li>created a description for this deployment based on the docstring of your flow function</li>
+<li>parsed the parameter schema for this flow function in order to expose an API for running this flow</li>
+</ul>
+<p>You can customize all of this either by <a href="/concepts/projects/#the-deployment-yaml-file">manually editing <code>deployment.yaml</code></a> or by providing more flags to the <code>prefect deploy</code> CLI command; CLI inputs will be prioritized over hard-coded values in your deployment's YAML file when creating or updating a single deployment.</p>
+<p>Let's create two ad-hoc runs for this deployment and confirm things are healthy:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>deployment<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;Call API/my-first-deployment&#39;</span>
+$<span class="w"> </span>prefect<span class="w"> </span>deployment<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;Call API/my-first-deployment&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--param<span class="w"> </span><span class="nv">url</span><span class="o">=</span>https://cat-fact.herokuapp.com/facts/
+</code></pre></div>
+</div>
+
+<p>You should now be able to monitor and confirm these runs were created and ran in the UI.</p>
+<div class="admonition tip">
+<p class="admonition-title">Flow registration</p>
+<p><code>prefect deploy</code> will automatically register your flow with your local project; you can register flows yourself explicitly with the <code>prefect project register-flow</code> command:
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>project<span class="w"> </span>register-flow<span class="w"> </span>./api_flow.py:call_api
+</code></pre></div>
+</div></p>
+<p>This pre-registration allows you to deploy based on name instead of entrypoint path:
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>deploy<span class="w"> </span>-f<span class="w"> </span><span class="s1">&#39;Call API&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-n<span class="w"> </span>my-first-deployment<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span>local-work
+</code></pre></div>
+</div></p>
+</div>
+<h3 id="git-based-deployment">Git-based deployment<a class="headerlink" href="#git-based-deployment" title="Permanent link">&para;</a></h3>
+<p>In this example, we'll initialize a project from <a href="https://github.com/PrefectHQ/hello-projects">a pre-built GitHub repository</a> and see how it is automatically portable across machines.</p>
+<p>We start by cloning the remote repository and initializing a project within the root of the repo directory:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PrefectHQ/hello-projects
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>hello-projects
+$<span class="w"> </span>prefect<span class="w"> </span>project<span class="w"> </span>init<span class="w"> </span>--recipe<span class="w"> </span>git
+</code></pre></div>
+</div>
+
+<p>We can now proceed with the same steps as above to create a new deployment:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>deploy<span class="w"> </span>-f<span class="w"> </span><span class="s1">&#39;log-flow&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-n<span class="w"> </span>my-git-deployment<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span>local-work
+</code></pre></div>
+</div>
+
+<p>Notice that we were able to deploy based on flow name alone; this is because the repository owner <a href="https://github.com/PrefectHQ/hello-projects/blob/main/.prefect/flows.json">pre-registered the <code>log-flow</code> for us</a>.  Alternatively, if we knew the full entrypoint path, we could run <code>prefect deploy ./flows/log_flow.py:log_flow</code>.</p>
+<p>Let's run this flow and discuss it's output:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>deployment<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;log-flow/my-git-deployment&#39;</span>
+</code></pre></div>
+</div>
+
+<p>In your worker process, you should see output that looks something like this:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>Cloning<span class="w"> </span>into<span class="w"> </span><span class="s1">&#39;hello-projects&#39;</span>...
+...
+<span class="m">12</span>:01:43.188<span class="w"> </span><span class="p">|</span><span class="w"> </span>INFO<span class="w">    </span><span class="p">|</span><span class="w"> </span>Task<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;log_task-0&#39;</span><span class="w"> </span>-<span class="w"> </span>Hello<span class="w"> </span>Marvin!
+<span class="m">12</span>:01:43.189<span class="w"> </span><span class="p">|</span><span class="w"> </span>INFO<span class="w">    </span><span class="p">|</span><span class="w"> </span>Task<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;log_task-0&#39;</span><span class="w"> </span>-<span class="w"> </span>Prefect<span class="w"> </span><span class="nv">Version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>.8.7+84.ge479b48b6.dirty<span class="w"> </span>🚀
+<span class="m">12</span>:01:43.189<span class="w"> </span><span class="p">|</span><span class="w"> </span>INFO<span class="w">    </span><span class="p">|</span><span class="w"> </span>Task<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;log_task-0&#39;</span><span class="w"> </span>-<span class="w"> </span>Hello<span class="w"> </span>from<span class="w"> </span>another<span class="w"> </span>file
+...
+<span class="m">12</span>:01:43.236<span class="w"> </span><span class="p">|</span><span class="w"> </span>INFO<span class="w">    </span><span class="p">|</span><span class="w"> </span>Task<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;log_config-0&#39;</span><span class="w"> </span>-<span class="w"> </span>Found<span class="w"> </span>config<span class="w"> </span><span class="o">{</span><span class="s1">&#39;some-piece-of-config&#39;</span>:<span class="w"> </span><span class="m">100</span><span class="o">}</span>
+...
+<span class="m">12</span>:01:43.266<span class="w"> </span><span class="p">|</span><span class="w"> </span>INFO<span class="w">    </span><span class="p">|</span><span class="w"> </span>Flow<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;delicate-labrador&#39;</span><span class="w"> </span>-<span class="w"> </span>Finished<span class="w"> </span><span class="k">in</span><span class="w"> </span>state<span class="w"> </span>Completed<span class="o">(</span><span class="s1">&#39;All states completed.&#39;</span><span class="o">)</span>
+</code></pre></div>
+</div>
+
+<p>A few important notes on what we're looking at here:</p>
+<ul>
+<li>You'll notice the message "Hello from another file"; this flow imports code from <a href="https://github.com/PrefectHQ/hello-projects/tree/main/flows">other related files</a> within the project. Prefect takes care of migrating the <em>entire</em> project directory for you, which includes files that you may import from</li>
+<li>Similarly, the configuration that is logged is located within <a href="https://github.com/PrefectHQ/hello-projects/blob/main/config.json">the root directory</a> of this project; you can always consider this root directory your working directory both locally and when this deployment is executed remotely</li>
+<li>Lastly, note the top line "Cloning into 'hello-projects'..."; because this project is based out of a GitHub repository, it is <em>automatically</em> portable to any remote location where both <code>git</code> and <code>prefect</code> are configured! You can convince yourself of this by either running a new local worker on a different machine, or by switching this deployment to run with your docker work pool (more on this shortly).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title"><code>prefect.yaml</code></p>
+<p>The above process worked out-of-the-box because of the information stored within <code>prefect.yaml</code>; if you open this file up in a text editor, you'll find that is not empty.  Specifically, it contains the following <code>pull</code> step that was automatically populated when you first ran <code>prefect project init</code>:
+<div class="highlight"><pre><span></span><code><span class="nt">pull</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefect.projects.steps.git_clone_project</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/PrefectHQ/hello-projects.git</span>
+<span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">    </span><span class="nt">access_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+</code></pre></div>
+If pulling from a private repository, your pull step might appear like below.  Note that the access_token is a "Secret" type, which will be retrieved and inferred.
+<div class="highlight"><pre><span></span><code><span class="nt">pull</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefect.projects.steps.git_clone_project</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/PrivateRepo/test-private-repo.git</span>
+<span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">    </span><span class="nt">access_token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">prefect.blocks.secret.my-github-secret</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</code></pre></div>
+These <code>pull</code> steps are the instructions sent to your worker's runtime environment that allow it to clone your project in remote locations. For more information, see <a href="/concepts/projects/">the project concept documentation</a>.</p>
+<p>For more examples of configuration options available for cloning projects, see <a href="/api-ref/prefect/projects/steps/pull">the <code>git_clone_project</code> step documentation</a>.</p>
+</div>
+<h3 id="dockerized-deployment">Dockerized deployment<a class="headerlink" href="#dockerized-deployment" title="Permanent link">&para;</a></h3>
+<p>In this example, we extend the examples above by dockerizing our setup and executing runs with a Docker Worker.  Building off the <a href="#git-based-deployment">git-based example above</a>, let's switch our deployment to submit work to the <code>docker-work</code> work pool that <a href="#worker-tip">we started at the beginning</a>:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>deploy<span class="w"> </span>-f<span class="w"> </span><span class="s1">&#39;log-flow&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-n<span class="w"> </span>my-docker-git-deployment<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span>docker-work
+$<span class="w"> </span>prefect<span class="w"> </span>deployment<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;log-flow/my-docker-git-deployment&#39;</span>
+</code></pre></div>
+</div>
+
+<p>As promised above, this worked out of the box!  </p>
+<p>Let's deploy a new flow from this project that requires additional dependencies that might not be available in the default image our work pool is using; this flow requires both <code>pandas</code> and <code>numpy</code> as a dependency, which we will install locally first to confirm the flow is working:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+$<span class="w"> </span>python<span class="w"> </span>flows/pandas_flow.py
+</code></pre></div>
+</div>
+
+<p>We now have two options for how to manage these dependencies in our worker's environment:</p>
+<ul>
+<li>setting the <code>EXTRA_PIP_PACKAGES</code> environment variable or using another hook to install the dependencies at runtime</li>
+<li>building a custom Docker image with the dependencies baked in</li>
+</ul>
+<p>In this tutorial, we will focus on building a custom Docker image. First, we need to configure a <code>build</code> step within our <code>prefect.yaml</code> file as follows (Note: if starting from scratch we could use the <code>docker-git</code> recipe):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># partial contents of prefect.yaml</span>
+
+<span class="nt">build</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefect_docker.projects.steps.build_docker_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local-only/testing</span>
+<span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
+<span class="w">    </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auto</span>
+<span class="w">    </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="nt">pull</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefect.projects.steps.git_clone_project</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/PrefectHQ/hello-projects.git</span>
+<span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">    </span><span class="nt">access_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+</code></pre></div>
+<p>A few notes:</p>
+<ul>
+<li><a href="/concepts/projects/#the-prefect-yaml-file">each step</a> references a function with inputs and outputs</li>
+<li>in this case, we are using <code>dockerfile: auto</code> to tell Prefect to automatically create a <code>Dockerfile</code> for us; otherwise we could write our own and pass its location as a path to the <code>dockerfile</code> kwarg</li>
+<li>to avoid dealing with real image registries, we are not pushing this image; in most use cases you will want <code>push: true</code> (which is the default)</li>
+<li>to see all available configuration options for building Docker images, see <a href="https://prefecthq.github.io/prefect-docker/projects/steps/#prefect_docker.projects.steps.build_docker_image">the <code>build_docker_image</code> step documentation</a></li>
+</ul>
+<p>All that's left to do is create our deployment and specify our image name to instruct the worker what image to pull:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>deploy<span class="w"> </span>-f<span class="w"> </span><span class="s1">&#39;pandas-flow&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-n<span class="w"> </span>docker-build-deployment<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span>docker-work<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-v<span class="w"> </span><span class="nv">image</span><span class="o">=</span>local-only/testing:dev
+$<span class="w"> </span>prefect<span class="w"> </span>deployment<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;log-flow/my-docker-git-deployment&#39;</span>
+</code></pre></div>
+</div>
+
+<p>Your run should complete successfully, logs and all!  Note that the <code>-v</code> flag represents a job variable, which are the allowed pieces of infrastructure configuration on a given work pool.  Each work pool can customize the fields they accept here.</p>
+<div class="admonition tip">
+<p class="admonition-title">Templating values</p>
+<p>As a matter of best practice, you should avoid hardcoding the image name and tag in both your <code>prefect.yaml</code> and CLI. Instead, you should <a href="/concepts/projects/#templating-options">use variable templating</a>.</p>
+</div>
+<h4 id="dockerizing-a-local-deployment">Dockerizing a local deployment<a class="headerlink" href="#dockerizing-a-local-deployment" title="Permanent link">&para;</a></h4>
+<p>Revisiting <a href="#local-deployment">our local deployment above</a>, let's begin by switching it to submit work to our <code>docker-work</code> work pool by re-running <code>prefect deploy</code> to see what happens:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>prefect<span class="w"> </span>deploy<span class="w"> </span>./api_flow.py:call_api<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-n<span class="w"> </span>my-second-deployment<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-p<span class="w"> </span>docker-work
+$<span class="w"> </span>prefect<span class="w"> </span>deployment<span class="w"> </span>run<span class="w"> </span><span class="s1">&#39;Call API/my-second-deployment&#39;</span>
+</code></pre></div>
+</div>
+
+<p>This fails with the following error:</p>
+<div class="terminal">
+<div class="highlight"><pre><span></span><code>ERROR:<span class="w"> </span>FileNotFoundError:<span class="w"> </span><span class="o">[</span>Errno<span class="w"> </span><span class="m">2</span><span class="o">]</span><span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory:<span class="w"> </span><span class="s1">&#39;/Users/chris/dev/my-first-project&#39;</span>
+</code></pre></div>
+</div>
+
+<p>The reason this occurs is because our deployment has a fundamentally local <code>pull</code> step; inspecting <code>prefect.yaml</code> we find:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">pull</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefect.projects.steps.set_working_directory</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/Users/chris/dev/my-first-project</span>
+</code></pre></div>
+<p>In order to successfully submit such a project to a dockerized environment, we need to either:</p>
+<ul>
+<li><a href="/concepts/projects/#the-push-section"><code>push</code> this project</a> to a remote location (such as a Cloud storage bucket)</li>
+<li><a href="/concepts/projects/#the-build-section"><code>build</code> this project</a> into a Docker image artifact </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Advanced: <code>push</code> steps</p>
+<p>Populating a <code>push</code> step is considered an advanced feature of projects that requires additional considerations to ensure the <code>pull</code> step is compatible with the <code>push</code> step; as such it is out of scope for this tutorial.</p>
+</div>
+<p>Following the same structure as above, we will include a new <code>build</code> step as well as alter our <code>pull</code> step to be compatible with the built image's filesystem:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># partial contents of prefect.yaml</span>
+
+<span class="nt">build</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefect_docker.projects.steps.build_docker_image</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local-only/testing</span>
+<span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev2</span>
+<span class="w">    </span><span class="nt">dockerfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auto</span>
+<span class="w">    </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="nt">pull</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">prefect.projects.steps.set_working_directory</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/opt/prefect/hello-projects</span>
+</code></pre></div>
+<p>Rerunning the same <code>deploy</code> command above now makes this a healthy deployment!</p>
+<h2 id="customizing-the-steps">Customizing the steps<a class="headerlink" href="#customizing-the-steps" title="Permanent link">&para;</a></h2>
+<p>For more information on what can be customized with <code>prefect.yaml</code>, check out the <a href="/concepts/projects/">Projects concept doc</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.prefect.io/slack/" target="_blank" rel="noopener" title="www.prefect.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.code.copy", "navigation.tabs.sticky", "search.suggest", "search.highlight", "navigation.path", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
+      
+        <script src="../../js/termynal.js"></script>
+      
+    
+  </body>
+</html>
