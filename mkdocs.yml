@@ -7,7 +7,6 @@ site_url: https://example.com/
 nav:
   - Home: index.md
   - Quick Start: scrapy.md
-  - Prefect: example.md
   - Tutorial:
     - tutorial/index.md
     - Deployments: tutorial/deployments.md
