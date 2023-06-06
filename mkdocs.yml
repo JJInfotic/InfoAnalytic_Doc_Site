@@ -1,0 +1,149 @@
+site_name: Info Analytica Documentation
+site_url: https://example.com/
+# edit_uri: edit/main/docs
+
+# # Define page navigation structure
+# # if nav is not defined, then H1 tag is used
+nav:
+  - Home: index.md
+  - Quick Start: scrapy.md
+  - Prefect: example.md
+  - Tutorial:
+    - tutorial/index.md
+    - Deployments: tutorial/deployments.md
+    - Projects: tutorial/projects.md
+
+# custom theme `pip install mkdocs-material`
+theme:
+  logo: img/logos/logo.svg
+  # name: 'bootstrap'
+  # name: 'readthedocs'
+  name: 'material'
+  # custom_dir: docs/overrides
+  favicon: img/+favicon.ico
+  features:
+      - announce.dismiss
+      - content.action.edit
+      - content.code.copy
+      # - toc.integrate # have to make index pages for sections if want emoji for them
+      # - navigation.tabs
+      - navigation.tabs.sticky
+      - search.suggest
+      - search.highlight
+      - navigation.path
+      - navigation.indexes
+  font:
+      text: Inter
+      code: Source Code Pro
+  icon:
+      repo: fontawesome/brands/github
+      edit: material/pencil
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+          icon: material/brightness-auto
+          name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      accent: blue
+      primary: red
+      scheme: default
+      toggle:
+          icon: material/weather-sunny
+          name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      accent: blue
+      primary: blue
+      scheme: slate
+      toggle:
+          icon: material/weather-night
+          name: Switch to light mode
+
+
+extra_css:
+    - stylesheets/theme.css
+    - stylesheets/admonitions.css
+    - stylesheets/api_ref.css
+    - stylesheets/rest_ref.css
+    - stylesheets/syntax_highlights.css
+    - stylesheets/termynal.css
+    - stylesheets/extra.css
+
+extra_javascript:
+    - js/custom.js
+    - js/termynal.js
+
+markdown_extensions:
+    - admonition
+    - attr_list
+    - codehilite
+    - md_in_html
+    - meta
+    # highlighter
+    - pymdownx.highlight:
+        use_pygments: true
+
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.details
+    - pymdownx.tabbed
+    - toc:
+        permalink: true
+    - pymdownx.snippets
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+plugins:
+    mike:
+        canonical_version: latest
+        version_selector: true
+    autorefs: {}
+    mkdocstrings:
+        custom_templates: docs/templates
+        handlers:
+            python:
+                options:
+                    show_root_heading: True
+                    show_object_full_path: False
+                    show_category_heading: False
+                    show_bases: True
+                    show_submodules: False
+                    show_if_no_docstring: False
+                    show_signature: False
+                    heading_level: 1
+                    filters: ["!^_"]
+    render_swagger: {}
+    search: {}
+    gen-files:
+        scripts:
+            # - docs/integrations/generate_catalog.py
+            - docs/recipes/generate_catalog.py
+
+
+
+extra:
+    version:
+        provider: mike
+    social:
+        - icon: fontawesome/brands/slack
+          link: https://www.prefect.io/slack/
+        # - icon: fontawesome/brands/discourse
+        #   link: https://discourse.prefect.io/
+        # - icon: fontawesome/brands/youtube
+        #   link: https://www.youtube.com/c/PrefectIO/videos
+        # - icon: fontawesome/regular/newspaper
+        #   link: https://prefect.io/guide/
+        # - icon: fontawesome/brands/twitter
+        #   link: https://twitter.com/PrefectIO
+        # - icon: fontawesome/brands/linkedin
+        #   link: https://www.linkedin.com/company/prefect/
+        # - icon: fontawesome/brands/github
+        #   link: https://github.com/PrefectHQ/prefect
+        # - icon: fontawesome/brands/docker
+        #   link: https://hub.docker.com/r/prefecthq/prefect/
+        # - icon: fontawesome/brands/python
+        #   link: https://pypi.org/project/prefect/            
