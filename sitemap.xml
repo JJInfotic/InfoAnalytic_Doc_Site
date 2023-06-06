@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/</loc>
+         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/</loc>
          <lastmod>2023-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/scrapy/</loc>
+         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/scrapy/</loc>
          <lastmod>2023-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/recipes/recipes/</loc>
+         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/recipes/recipes/</loc>
          <lastmod>2023-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/tutorial/</loc>
+         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/tutorial/</loc>
          <lastmod>2023-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/tutorial/deployments/</loc>
+         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/tutorial/deployments/</loc>
          <lastmod>2023-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/tutorial/projects/</loc>
+         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/tutorial/projects/</loc>
          <lastmod>2023-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
