@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/prefect/</loc>
-         <lastmod>2023-06-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://example.com/scrapy/</loc>
          <lastmod>2023-06-06</lastmod>
          <changefreq>daily</changefreq>
