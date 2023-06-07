@@ -7,8 +7,8 @@ site_url: https://jjinfotic.github.io/InfoAnalytic_Doc_Site/
 nav:
   - Home: index.md
   - MkDocs Instruction:
-      - Add new page: "MkDocs Instruction/Insert_Doc_Page.md"
-      - Site hosting: "MkDocs Instruction/GitHub_Hosting_Setup.md"
+      - Add new page: "MkDocs_Instruction/Insert_Doc_Page.md"
+      - Site hosting: "MkDocs_Instruction/GitHub_Hosting_Setup.md"
   # - Shopify:
   # - Quick Start: scrapy.md
   # - Tutorial:
