@@ -2,32 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/</loc>
-         <lastmod>2023-06-06</lastmod>
+         <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/scrapy/</loc>
-         <lastmod>2023-06-06</lastmod>
+         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/MkDocs%20Instruction/GitHub_Hosting_Setup/</loc>
+         <lastmod>2023-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/MkDocs%20Instruction/Insert_Doc_Page/</loc>
+         <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/recipes/recipes/</loc>
-         <lastmod>2023-06-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/tutorial/</loc>
-         <lastmod>2023-06-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/tutorial/deployments/</loc>
-         <lastmod>2023-06-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://jjinfotic.github.io/InfoAnalytic_Doc_Site/tutorial/projects/</loc>
-         <lastmod>2023-06-06</lastmod>
+         <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
