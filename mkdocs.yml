@@ -6,11 +6,14 @@ site_url: https://jjinfotic.github.io/InfoAnalytic_Doc_Site/
 # # if nav is not defined, then H1 tag is used
 nav:
   - Home: index.md
-  - Quick Start: scrapy.md
-  - Tutorial:
-    - tutorial/index.md
-    - Deployments: tutorial/deployments.md
-    - Projects: tutorial/projects.md
+  - MkDocs Instruction:
+    
+  - Shopify:
+  # - Quick Start: scrapy.md
+  # - Tutorial:
+  #   - tutorial/index.md
+  #   - Deployments: tutorial/deployments.md
+  #   - Projects: tutorial/projects.md
 
 # custom theme `pip install mkdocs-material`
 theme:
